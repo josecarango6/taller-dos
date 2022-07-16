@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -14,6 +15,7 @@
             <option value="$PROJECT_DIR$/customer-service" />
             <option value="$PROJECT_DIR$/eureka-service" />
             <option value="$PROJECT_DIR$/gateway-service" />
+            <option value="$PROJECT_DIR$/movie-service" />
             <option value="$PROJECT_DIR$/product-service" />
             <option value="$PROJECT_DIR$/shopping-service" />
             <option value="$PROJECT_DIR$/user-service" />
