@@ -2,8 +2,10 @@ package co.com.poli.movieservice.controller;
 
 import co.com.poli.movieservice.helpers.Response;
 import co.com.poli.movieservice.helpers.ResponseBuild;
+import co.com.poli.movieservice.mapper.MovieInDtoToMovie;
 import co.com.poli.movieservice.persistence.entity.Movie;
 import co.com.poli.movieservice.service.MovieService;
+import co.com.poli.movieservice.service.dto.MovieInDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -20,15 +22,16 @@ import java.util.stream.Collectors;
 public class MovieController {
 
     private final MovieService movieService;
-
     private final ResponseBuild builder;
 
+    private final MovieInDtoToMovie mapper;
+
     @PostMapping
-    public Response save(@Valid @RequestBody Movie movie, BindingResult result){
+    public Response save(@Valid @RequestBody MovieInDTO movie, BindingResult result){
         if (result.hasErrors()){
             return builder.failed(this.formatMessage(result));
         }
-        movieService.save(movie);
+        movieService.save(mapper.map(movie));
         return builder.success(movie);
     }
 
