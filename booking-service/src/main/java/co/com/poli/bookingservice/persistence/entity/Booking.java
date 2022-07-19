@@ -30,4 +30,7 @@ public class Booking {
     @Column(name = "showtimes_id", nullable = false)
     private Long showtimesId;
 
+    @Column(name = "movies")
+    private Long[] movies;
+
 }

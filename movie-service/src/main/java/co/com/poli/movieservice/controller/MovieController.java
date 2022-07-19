@@ -24,14 +24,14 @@ public class MovieController {
     private final MovieService movieService;
     private final ResponseBuild builder;
 
-    //private final MovieInDtoToMovie mapper;
+    private final MovieInDtoToMovie mapper;
 
     @PostMapping
-    public Response save(@Valid @RequestBody Movie movie, BindingResult result){
+    public Response save(@Valid @RequestBody MovieInDTO movie, BindingResult result){
         if (result.hasErrors()){
             return builder.failed(this.formatMessage(result));
         }
-        movieService.save(movie);
+        movieService.save(mapper.map(movie));
         return builder.success(movie);
     }
 

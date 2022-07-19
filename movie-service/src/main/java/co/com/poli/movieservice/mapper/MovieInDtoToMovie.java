@@ -2,7 +2,9 @@ package co.com.poli.movieservice.mapper;
 
 import co.com.poli.movieservice.persistence.entity.Movie;
 import co.com.poli.movieservice.service.dto.MovieInDTO;
+import org.springframework.stereotype.Component;
 
+@Component
 public class MovieInDtoToMovie implements IMapper<MovieInDTO, Movie> {
 
     @Override

@@ -23,4 +23,6 @@ public class BookingInDTO {
     @NotEmpty(message = "El showtimesId no puede estar vacio")
     @Column(name = "showtimes_id")
     private Long showtimesId;
+
+    private Long[] movies;
 }

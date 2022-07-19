@@ -2,8 +2,10 @@ package co.com.poli.bookingservice.controller;
 
 import co.com.poli.bookingservice.helpers.Response;
 import co.com.poli.bookingservice.helpers.ResponseBuild;
+import co.com.poli.bookingservice.mapper.BookingInDtoToBooking;
 import co.com.poli.bookingservice.persistence.entity.Booking;
 import co.com.poli.bookingservice.service.BookingService;
+import co.com.poli.bookingservice.service.dto.BookingInDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -20,15 +22,16 @@ import java.util.stream.Collectors;
 public class BookingController {
 
     private final BookingService bookingService;
-
     private final ResponseBuild builder;
 
+    private final BookingInDtoToBooking mapper;
+
     @PostMapping
-    public Response save(@Valid @RequestBody Booking booking, BindingResult result){
+    public Response save(@Valid @RequestBody BookingInDTO booking, BindingResult result){
         if (result.hasErrors()){
             return builder.failed(this.formatMessage(result));
         }
-        bookingService.save(booking);
+        bookingService.save(mapper.map(booking));
         return builder.success(booking);
     }
 

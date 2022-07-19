@@ -8,7 +8,7 @@ public class ShowtimeInDtoToShowtime implements IMapper<ShowtimeInDTO, Showtime>
     public Showtime map(ShowtimeInDTO in) {
         Showtime showtime = new Showtime();
         showtime.setDate(in.getDate());
-        //showtime.setMovies(in.getMovies());
+        showtime.setMovies(in.getMovies());
         return showtime;
     }
 }

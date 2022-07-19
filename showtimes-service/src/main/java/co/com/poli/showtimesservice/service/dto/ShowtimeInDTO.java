@@ -21,6 +21,6 @@ public class ShowtimeInDTO {
     @NotEmpty(message = "La fecha no puede estar vacia")
     private LocalDateTime date;
 
-    //private List<Long> movies;
+    private Long[] movies;
 
 }

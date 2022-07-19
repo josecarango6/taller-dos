@@ -5,7 +5,7 @@ spring:
     config:
       server:
         git:
-          uri: file:///C:/Users/USER/Desktop/PROFUNDIZACION/taller-dos/configdata
+          uri: file:///D:/Documentos/A POLI/Tecnologia/Cuarto Semestre/PDS/configdata
   security:
     user:
       name: ${CONFIG_USER}

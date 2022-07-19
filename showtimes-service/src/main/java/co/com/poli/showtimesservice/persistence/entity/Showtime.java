@@ -22,10 +22,8 @@ public class Showtime {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", unique = true, nullable = false)
     private Long id;
-
     @Column(name = "date")
     private LocalDateTime date;
-
     @Column(name = "movies")
     private Long[] movies;
 

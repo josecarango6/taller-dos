@@ -3,6 +3,7 @@ package co.com.poli.showtimesservice.controller;
 
 import co.com.poli.showtimesservice.helpers.Response;
 import co.com.poli.showtimesservice.helpers.ResponseBuild;
+import co.com.poli.showtimesservice.mapper.ShowtimeInDtoToShowtime;
 import co.com.poli.showtimesservice.persistence.entity.Showtime;
 import co.com.poli.showtimesservice.service.ShowtimeService;
 import co.com.poli.showtimesservice.service.dto.ShowtimeInDTO;
@@ -25,14 +26,14 @@ public class ShowtimeController {
 
     private final ResponseBuild builder;
 
-    //private final ShowtimeInDtoToShowtime mapper;
+    private final ShowtimeInDtoToShowtime mapper;
 
     @PostMapping
-    public Response save(@Valid @RequestBody Showtime showtime, BindingResult result){
+    public Response save(@Valid @RequestBody ShowtimeInDTO showtime, BindingResult result){
         if (result.hasErrors()){
             return  builder.failed((this.formatMessage(result)));
         }
-        showtimeService.save(showtime);
+        showtimeService.save(mapper.map(showtime));
         return builder.success(showtime);
     }
 
