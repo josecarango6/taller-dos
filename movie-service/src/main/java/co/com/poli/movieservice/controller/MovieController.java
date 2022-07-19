@@ -24,7 +24,7 @@ public class MovieController {
     private final MovieService movieService;
     private final ResponseBuild builder;
 
-    private final MovieInDtoToMovie mapper;
+    //private final MovieInDtoToMovie mapper;
 
     @PostMapping
     public Response save(@Valid @RequestBody Movie movie, BindingResult result){

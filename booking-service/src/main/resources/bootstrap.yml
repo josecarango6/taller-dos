@@ -1,6 +1,6 @@
 spring:
   application:
-    name: user-service
+    name: booking-service
   cloud:
     config:
       uri: http://localhost:9000

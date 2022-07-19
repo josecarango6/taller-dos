@@ -2,6 +2,7 @@ package co.com.poli.userservice.controller;
 
 import co.com.poli.userservice.helpers.Response;
 import co.com.poli.userservice.helpers.ResponseBuild;
+import co.com.poli.userservice.mapper.UserInDtoToUser;
 import co.com.poli.userservice.persistence.entity.User;
 import co.com.poli.userservice.service.UserService;
 import co.com.poli.userservice.service.dto.UserInDTO;
@@ -23,14 +24,14 @@ public class UserController {
 
     private final UserService userService;
     private final ResponseBuild builder;
-    //private final UserInDtoToUser mapper;
+    private final UserInDtoToUser mapper;
 
     @PostMapping
-    public Response save(@Valid @RequestBody User user, BindingResult result){
+    public Response save(@Valid @RequestBody UserInDTO user, BindingResult result){
         if (result.hasErrors()){
             return builder.failed(this.formatMessage(result));
         }
-        userService.save(user);
+        userService.save(mapper.map(user));
         return builder.success(user);
     }
 

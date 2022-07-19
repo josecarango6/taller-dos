@@ -46,6 +46,14 @@ public class ShowtimeController {
         return builder.success(showtimeService.findById(id));
     }
 
+    /*@PutMapping("/{id}")
+    public Response updateBydId(@PathVariable Long id, @RequestBody @Valid Showtime showtime){
+        Showtime showtime = showtimeService.findById(id);
+
+
+    }"*/
+
+
 
     private List<Map<String, String>> formatMessage(BindingResult result) {
         List<Map<String, String>> errors = result.getFieldErrors().stream()
