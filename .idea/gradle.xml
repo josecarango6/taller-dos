@@ -11,6 +11,7 @@
           <set>
             <option value="$PROJECT_DIR$/../taller-dos" />
             <option value="$PROJECT_DIR$/../taller-dos/admin-service" />
+            <option value="$PROJECT_DIR$/../taller-dos/booking-service" />
             <option value="$PROJECT_DIR$/../taller-dos/config-service" />
             <option value="$PROJECT_DIR$/../taller-dos/customer-service" />
             <option value="$PROJECT_DIR$/../taller-dos/eureka-service" />
@@ -18,6 +19,7 @@
             <option value="$PROJECT_DIR$/../taller-dos/movie-service" />
             <option value="$PROJECT_DIR$/../taller-dos/product-service" />
             <option value="$PROJECT_DIR$/../taller-dos/shopping-service" />
+            <option value="$PROJECT_DIR$/../taller-dos/showtimes-service" />
             <option value="$PROJECT_DIR$/../taller-dos/user-service" />
           </set>
         </option>
@@ -30,6 +32,7 @@
           <set>
             <option value="$PROJECT_DIR$/../taller-dos" />
             <option value="$PROJECT_DIR$/../taller-dos/admin-service" />
+            <option value="$PROJECT_DIR$/../taller-dos/booking-service" />
             <option value="$PROJECT_DIR$/../taller-dos/config-service" />
             <option value="$PROJECT_DIR$/../taller-dos/customer-service" />
             <option value="$PROJECT_DIR$/../taller-dos/eureka-service" />
@@ -37,6 +40,7 @@
             <option value="$PROJECT_DIR$/../taller-dos/movie-service" />
             <option value="$PROJECT_DIR$/../taller-dos/product-service" />
             <option value="$PROJECT_DIR$/../taller-dos/shopping-service" />
+            <option value="$PROJECT_DIR$/../taller-dos/showtimes-service" />
             <option value="$PROJECT_DIR$/../taller-dos/user-service" />
           </set>
         </option>

@@ -13,6 +13,8 @@
         <module name="Test.eureka-service.main" />
         <module name="Test.product-service.main" />
         <module name="Test.user-service.main" />
+        <module name="Test.showtimes-service.main" />
+        <module name="Test.booking-service.main" />
         <module name="Test.gateway-service.main" />
         <module name="Test.admin-service.main" />
         <module name="Test.config-service.main" />
